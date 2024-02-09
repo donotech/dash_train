@@ -42,7 +42,7 @@ result = calculate(add, 4, 6)
 print(result)
 
 generator_exp = (i * 5 for i in range(5) if i % 2 == 0)
-
+generator_exp2 = [i * 5 for i in range(5) if i % 2 == 0]
 for i in generator_exp:
     print(i)
 
