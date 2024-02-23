@@ -77,6 +77,12 @@ def update_graph(xaxis_column_name, yaxis_column_name,
                  xaxis_type, yaxis_type,
                  year_value):
     dff = df[df['Year'] == year_value]
+    df2 = dff[dff['Indicator Name'] == xaxis_column_name]
+    print(df2)
+
+    df3 = dff[dff['Indicator Name'] == yaxis_column_name]
+    print("Y ==")
+    print(df3)
 
     fig = px.scatter(x=dff[dff['Indicator Name'] == xaxis_column_name]['Value'],
             y=dff[dff['Indicator Name'] == yaxis_column_name]['Value'],
