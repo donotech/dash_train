@@ -12,7 +12,7 @@ def login():
     return app.send_static_file("login.html")
 
 
-@app.route("/buy/<flask_no>")
+@app.route("/product/<flask_no>")
 def buy(flask_no):
     print(flask_no)
     return render_template("buy.html", flaskNumber=flask_no)
